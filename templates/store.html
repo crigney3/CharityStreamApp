@@ -9,12 +9,12 @@
     </head>
     <body>
         <h1>
-            You are purchasing {{item}}, which costs {{cost}}. Would you like to add a message?
+            Would you like to add a message to your donation?
         </h1>
         
         <form method="POST">
-            Item: <input type="text" name="item"><br>
-            <input type="submit" value="Submit">
+            <input type="hidden" name="code" value={{ item.cost }}/>
+            <button name="item" value={{ item.code }}>Buy</button>
         </form>
     </body>
     

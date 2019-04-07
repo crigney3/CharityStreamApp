@@ -24,7 +24,8 @@
                     <form action="" method="POST">
                         <input type="hidden" name="cost" value={{ item.cost }}/>
                         <input type="hidden" name="code" value={{ item.code }}/>
-                        <button name="item" value={{ item.name }}>Buy</button>
+                        <input type="hidden" name="send" value="false"/>
+                        <button name="item" value={{ item.name }}>Add to Cart</button>
                     </form>
                 </div>
             </div>
@@ -35,7 +36,17 @@
         <div class="col-sm-4 text-center">Misc.</div>
     </div>
 
-    
+    <div class="row">
+        <div class="col-sm-12 text-center">Minimum Total Purchase is $2.</div>   
+    </div>
+        
+    <div class="row">
+        <div class="col-sm-12 text-center"><form action="" method="POST">
+                        <input type="hidden" name="cost" value=0/>
+                        <input type="hidden" name="code" value=""/>
+                        <button name="send" value="true">Check out with JustGiving</button>
+                    </form></div>   
+    </div>
 
     </body>
 </html>
