@@ -1,24 +1,21 @@
-Iron Ingot,20,iron_ingot
-Iron Sword,35,iron_sword
-Iron Pickaxe,50,iron_pickaxe
-Iron Helmet,85,iron_helmet
-Iron Chestplate,140,iron_chestplate
-Iron Leggings,125,iron_leggings
-Iron Boots,70,iron_boots
-Gold Ingot,15,gold_ingot
-Gold Sword,25,gold_sword
-Gold Pickaxe,40,gold_pickaxe
-Gold Helmet,60,gold_helmet
-Gold Chestplate,100,gold_chestplate
-Gold Leggings,90,gold_leggings
-Gold Boots,50,gold_boots
-Diamond,100,diamond
-Diamond Sword,195,diamond_sword
-Diamond Pickaxe,290,diamond_pickaxe
-Diamond Helment,480,diamond_helmet
-Diamond Chestplate,750,diamond_chestplate
-Diamond Leggings,670,diamond_leggings
-Diamond Boots,385,diamond_boots
-Golden Apple,60,golden_apple
-Golden God Apple,1000,enchanted_golden_apple
-Steak,75,cooked_beef
+Iron Ingot,.20,iron_ingot
+Iron Sword,.35,iron_sword
+Iron Pickaxe,.50,iron_pickaxe
+Iron Helmet,.85,iron_helmet
+Iron Chestplate,1.40,iron_chestplate
+Iron Leggings,1.25,iron_leggings
+Iron Boots,.70,iron_boots
+Gold Ingot,.15,gold_ingot
+Gold Sword,.25,gold_sword
+Gold Pickaxe,.40,gold_pickaxe
+Gold Helmet,.60,gold_helmet
+Gold Chestplate,1.00,gold_chestplate
+Gold Leggings,.90,gold_leggings
+Gold Boots,.50,gold_boots
+Diamond,1.00,diamond
+Diamond Sword,1.95,diamond_sword
+Diamond Pickaxe,2.90,diamond_pickaxe
+Diamond Helment,4.80,diamond_helmet
+Diamond Chestplate,7.50,diamond_chestplate
+Diamond Leggings,6.70,diamond_leggings
+Diamond Boots,3.85,diamond_boots

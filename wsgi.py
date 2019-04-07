@@ -20,6 +20,18 @@ with open('./items/items.csv') as csvfile:
         newItem = item(row[0], row[1], row[2])
         items.append(newItem)
 
+with open('./items/buffs.csv') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    for row in reader:
+        newItem = item(row[0], row[1], row[2])
+        buffs.append(newItem)
+
+with open('./items/misc.csv') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    for row in reader:
+        newItem = item(row[0], row[1], row[2])
+        misc.append(newItem)
+
 @application.route("/", methods=['GET', 'POST'])
 def index():
 
@@ -44,7 +56,7 @@ def index():
                         '?amount=' + str(cost) + '&currency=USD&reference=bbcsh&message=' + message + '&send=' + str(send))
         else:
             return redirect(url_for('index') + "?cost=" + str(cost) + "&message=" + str(message) + "&send=" + str(send))
-    return render_template('home.html', Items=items)
+    return render_template('home.html', Items=items, Buffs=buffs, Misc=misc)
 
 #The below route is no longer needed. With the new changes, all the info
 #needed for the JustGiving app can be found at the index.

@@ -1,13 +1,2 @@
-Strength I,100
-Strength II,300
-Resistance I,100
-Resistance II,300
-Speed I,75
-Speed II,225
-Jump Boost I,35
-Jump Boost II,90
-Blindness I,125
-Blindness II, 350
-Nausea I,200
-Nausea II,500
-
+Golden Apple,.60,golden_apple
+Golden God Apple,10.00,enchanted_golden_apple
