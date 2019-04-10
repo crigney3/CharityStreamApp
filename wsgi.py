@@ -7,12 +7,19 @@ JG_FUNDRAISING_PAGE_ID = '11779935';
 items = []
 buffs = []
 misc = []
+players = []
 
 class item:
     def __init__(self, name, cost, code):
         self.name = name
         self.cost = cost
         self.code = code
+
+class player:
+    def __init__(self, name, username, org):
+        self.name = name
+        self.username = username
+        self.org = org
 
 with open('./items/items.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
@@ -32,6 +39,12 @@ with open('./items/misc.csv') as csvfile:
         newItem = item(row[0], row[1], row[2])
         misc.append(newItem)
 
+with open('./items/players.csv') as csvfile:
+    reader = csv.reader(csvfile, delimiter=',')
+    for row in reader:
+        newPlayer = player(row[0], row[1], row[2])
+        players.append(newPlayer)
+
 @application.route("/", methods=['GET', 'POST'])
 def index():
 
@@ -46,17 +59,20 @@ def index():
         send = request.form.get('send')
         print(send)
         if request.args.get('message') != None:
-            message = request.args.get('message') + '{item:' + code + '}'
+            message = request.args.get('message')
+            if(len(message) < 190):
+                message = message + '{' + code + '}'
         else:
-            message = '{item:' + code + '}'
+            message = '{' + code + '}'
         print(message)
         if send == 'true':
             #Send the url to JustGiving for Checkout
+            player = request.form.get('player')
             return redirect('http://link.justgiving.com/v1/fundraisingpage/donate/pageId/' + JG_FUNDRAISING_PAGE_ID +
-                        '?amount=' + str(cost) + '&currency=USD&reference=bbcsh&message=' + message + '&send=' + str(send))
+                        '?amount=' + str(cost) + '&currency=USD&reference=bbcsh&message=' + '{user:' + str(player) + '}' + message)
         else:
             return redirect(url_for('index') + "?cost=" + str(cost) + "&message=" + str(message) + "&send=" + str(send))
-    return render_template('home.html', Items=items, Buffs=buffs, Misc=misc)
+    return render_template('home.html', Items=items, Buffs=buffs, Misc=misc, Names=players)
 
 #The below route is no longer needed. With the new changes, all the info
 #needed for the JustGiving app can be found at the index.

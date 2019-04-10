@@ -8,24 +8,31 @@
     </head>
     
     <body>
-
+        
+    <nav class="navbar navbar-default bg-primary">
+        <div class="container-fluid">
+            <div class="navbar-header">               
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <a class="navbar-brand" href="#">JustGiving</a>
+            </div>    
+        </div>
+    </nav>
+    
     <div class="row">
         <div class="col-sm-4 text-center">
         <div class="lead">Items</div>
-            <div class="row text-left">
-                <div class="storeItem col-sm-6">Item</div>
-                <div class="storePrice col-sm-6">Cost</div>
-            </div>
             {% for item in Items %}
             <div class="row text-center">
                 <div class="storeItem col-sm-4">{{  item.name  }}</div>
-                <div class="storePrice col-sm-4">{{  item.cost  }}</div>
+                <div class="storePrice col-sm-4">${{  item.cost  }}</div>
                 <div class="storeBuy col-sm-4">
                     <form action="" method="POST">
                         <input type="hidden" name="cost" value={{ item.cost }}/>
                         <input type="hidden" name="code" value={{ item.code }}/>
                         <input type="hidden" name="send" value="false"/>
-                        <button name="item" value={{ item.name }}>Add to Cart</button>
+                        <button name="item" class="btn btn-primary" value={{ item.name }}>Add to Cart</button>
                     </form>
                 </div>
             </div>
@@ -34,20 +41,16 @@
         </div>
         <div class="col-sm-4 text-center">
         <div class="lead">Buffs</div>
-        <div class="row text-left">
-                <div class="storeItem col-sm-6">Item</div>
-                <div class="storePrice col-sm-6">Cost</div>
-            </div>
             {% for buff in Buffs %}
             <div class="row text-center">
                 <div class="storeItem col-sm-4">{{  buff.name  }}</div>
-                <div class="storePrice col-sm-4">{{  buff.cost  }}</div>
+                <div class="storePrice col-sm-4">${{  buff.cost  }}</div>
                 <div class="storeBuy col-sm-4">
                     <form action="" method="POST">
                         <input type="hidden" name="cost" value={{ buff.cost }}/>
                         <input type="hidden" name="code" value={{ buff.code }}/>
                         <input type="hidden" name="send" value="false"/>
-                        <button name="item" value={{ buff.name }}>Add to Cart</button>
+                        <button name="item" class="btn btn-primary" value={{ buff.name }}>Add to Cart</button>
                     </form>
                 </div>
             </div>
@@ -55,20 +58,16 @@
         </div>
         <div class="col-sm-4 text-center">
         <div class="lead">Miscellanious</div>
-        <div class="row text-left">
-                <div class="storeItem col-sm-6">Item</div>
-                <div class="storePrice col-sm-6">Cost</div>
-            </div>
             {% for misc in Misc %}
             <div class="row text-center">
                 <div class="storeItem col-sm-4">{{  misc.name  }}</div>
-                <div class="storePrice col-sm-4">{{  misc.cost  }}</div>
+                <div class="storePrice col-sm-4">${{  misc.cost  }}</div>
                 <div class="storeBuy col-sm-4">
                     <form action="" method="POST">
                         <input type="hidden" name="cost" value={{ misc.cost }}/>
                         <input type="hidden" name="code" value={{ misc.code }}/>
                         <input type="hidden" name="send" value="false"/>
-                        <button name="item" value={{ misc.name }}>Add to Cart</button>
+                        <button name="item" class="btn btn-primary" value={{ misc.name }}>Add to Cart</button>
                     </form>
                 </div>
             </div>
@@ -79,13 +78,33 @@
     <div class="row">
         <div class="col-sm-12 text-center">Minimum Total Purchase is $2.</div>   
     </div>
+    
+        <br>
         
     <div class="row">
         <div class="col-sm-12 text-center"><form action="" method="POST">
-                        <input type="hidden" name="cost" value=0/>
-                        <input type="hidden" name="code" value=""/>
-                        <button name="send" value="true">Check out with JustGiving</button>
-                    </form></div>   
+            
+            <div class="col-sm-3">
+                <input type="hidden" name="code" value=""/>
+            </div>
+            
+            <div class="col-sm-6 mx-auto">
+                <select name="player" class="form-control">
+                {% for name in Names %}
+                    <option name="player" value={{ name.username }}>{{name.name}} ({{ name.org }})</option>
+                {% endfor %}
+            </select>
+            </div>
+            
+            <div class="col-sm-3">
+                <input type="hidden" name="cost" value=0/>
+            </div>
+            <br>
+            <div class="col-sm-12 text-center">
+                <button name="send" class="btn btn-success" value="true">Check out with JustGiving</button>
+            </div>
+            
+        </form></div>   
     </div>
 
     </body>
