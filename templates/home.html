@@ -1,102 +1,155 @@
 <!DOCTYPE html>
 <html>
+    <!--
+Sword
+Pressing attack while holding a sword will increase your damage to both mobs and players. Upon damaging a mob or player, the sword's durability will decrease by 1.
+
+Helmet
+Each defense point will reduce any damage dealt to the player which is absorbed by armor by 4%, increasing additively with the number of defense points. Any "hit" from a damage source that can be blocked by armor will remove one point of durability from each piece of armor worn.
+    -->
+
     <head>
     <link rel="stylesheet" type="text/css" href="https://themeswitcher.csh.rit.edu/api/get">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <style>
+        .storeContent {
+            margin-left: 20px;
+        }
+        .groupTitle {
+            font-weight: bolder;
+            text-decoration: underline;
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .storeRow {
+            margin-bottom: 10px;
+        }
+        .storeItem {
+            font-weight: bold;
+            text-align: left;
+        }
+        .storeDescription {
+            text-align: left;
+            margin-left: 10px;
+            font-style: italic;
+        }
+        .rowSpacer {
+            margin-top: 15px;
+        }
+        .btn-success {
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+    </style>
     </head>
-    
+
     <body>
-        
+
     <nav class="navbar navbar-default bg-primary">
         <div class="container-fluid">
-            <div class="navbar-header">               
+            <div class="navbar-header">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <a class="navbar-brand" href="#">JustGiving</a>
-            </div>    
+            </div>
         </div>
     </nav>
-        
-    <div class="row">
+
+    <div class="row storeContent">
         <div class="col-sm-4 text-center">
-        <div class="lead">Miscellaneous</div>
+        <div class="lead groupTitle">Miscellaneous</div>
             {% for misc in Misc %}
-            <div class="row text-center">
-                <div class="storeItem col-sm-4">{{  misc.name  }}</div>
-                <div class="storePrice col-sm-4">${{  misc.cost  }}</div>
-                <div class="storeBuy col-sm-4">
-                    <form action="" method="POST">
-                        <input type="hidden" name="cost" value={{ misc.cost }}/>
-                        <input type="hidden" name="code" value={{ misc.code }}/>
-                        <input type="hidden" name="send" value="false"/>
-                        <button name="item" class="btn btn-primary" value={{ misc.name }}>Add to Cart</button>
-                    </form>
+            <div class="storeRow">
+                <div class="row text-center">
+                    <div class="storeItem col-sm-4">{{  misc.name  }}</div>
+                    <div class="storePrice col-sm-4">${{  misc.cost  }}</div>
+                    <div class="storeBuy col-sm-4">
+                        <form action="" method="POST">
+                            <input type="hidden" name="cost" value={{ misc.cost }}/>
+                            <input type="hidden" name="code" value={{ misc.code }}/>
+                            <input type="hidden" name="send" value="false"/>
+                            <button name="item" class="btn btn-primary" value={{ misc.name }}>Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="storeDescription col-sm-8">{{ misc.description }}</div>
                 </div>
             </div>
             {% endfor %}
         </div>
-        
+
         <div class="col-sm-4 text-center">
-        <div class="lead">Items</div>
+        <div class="lead groupTitle">Items</div>
             {% for item in Items %}
-            <div class="row text-center">
-                <div class="storeItem col-sm-4">{{  item.name  }}</div>
-                <div class="storePrice col-sm-4">${{  item.cost  }}</div>
-                <div class="storeBuy col-sm-4">
-                    <form action="" method="POST">
-                        <input type="hidden" name="cost" value={{ item.cost }}/>
-                        <input type="hidden" name="code" value={{ item.code }}/>
-                        <input type="hidden" name="send" value="false"/>
-                        <button name="item" class="btn btn-primary" value={{ item.name }}>Add to Cart</button>
-                    </form>
+            <div class="storeRow">
+                <div class="row text-center">
+                    <div class="storeItem col-sm-4">{{  item.name  }}</div>
+                    <div class="storePrice col-sm-4">${{  item.cost  }}</div>
+                    <div class="storeBuy col-sm-4">
+                        <form action="" method="POST">
+                            <input type="hidden" name="cost" value={{ item.cost }}/>
+                            <input type="hidden" name="code" value={{ item.code }}/>
+                            <input type="hidden" name="send" value="false"/>
+                            <button name="item" class="btn btn-primary" value={{ item.name }}>Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="storeDescription col-sm-8">{{ item.description }}</div>
                 </div>
             </div>
             {% endfor %}
         </div>
-        
+
         <div class="col-sm-4 text-center">
-        <div class="lead">Buffs</div>
+        <div class="lead groupTitle">Buffs</div>
             {% for buff in Buffs %}
-            <div class="row text-center">
-                <div class="storeItem col-sm-4">{{  buff.name  }}</div>
-                <div class="storePrice col-sm-4">${{  buff.cost  }}</div>
-                <div class="storeBuy col-sm-4">
-                    <form action="" method="POST">
-                        <input type="hidden" name="cost" value={{ buff.cost }}/>
-                        <input type="hidden" name="code" value={{ buff.code }}/>
-                        <input type="hidden" name="send" value="false"/>
-                        <button name="item" class="btn btn-primary" value={{ buff.name }}>Add to Cart</button>
-                    </form>
+            <div class="storeRow">
+                <div class="row text-center">
+                    <div class="storeItem col-sm-4">{{  buff.name  }}</div>
+                    <div class="storePrice col-sm-4">${{  buff.cost  }}</div>
+                    <div class="storeBuy col-sm-4">
+                        <form action="" method="POST">
+                            <input type="hidden" name="cost" value={{ buff.cost }}/>
+                            <input type="hidden" name="code" value={{ buff.code }}/>
+                            <input type="hidden" name="send" value="false"/>
+                            <button name="item" class="btn btn-primary" value={{ buff.name }}>Add to Cart</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="storeDescription col-sm-8">{{ buff.description }}</div>
                 </div>
             </div>
             {% endfor %}
         </div>
-        
-        
+
+
+    </div>
+
+    <div class="row rowSpacer">
+        <div class="col-sm-12 text-center lead">Minimum Total Purchase is $2.</div>
+    </div>
+
+    <div class="row rowSpacer">
+        <div class="col-sm-8 text-center lead mx-auto">Do not reduce the cost or remove the message that has been added. The donation may go through without any items being sent. You can add a message before or after the {bracketed} characters as long as the total length does not exceed 200 characters.</div>
+    </div>
+
+    <div class="row rowSpacer">
+        <div class="col-sm-12 text-center">
+            Choose a player to give your items to!
+        </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-12 text-center lead">Minimum Total Purchase is $2.</div>   
-    </div>
-    
-    <div class="row">
-        <div class="col-sm-8 text-center lead mx-auto">Do not reduce the cost or remove the message that has been added! The donation may go through without any items being sent. You can add a message before or after the {bracketed} characters as long as the total length does not exceed 200 characters.</div>   
-    </div>
-    
-    <div class="row">
-        <div class="col-sm-12 text-center">
-            Choose a player to give your items to!   
-        </div>         
-    </div>
-        
-    <div class="row">
         <div class="col-sm-12 text-center"><form action="" method="POST">
-            
-            
-            <div class="col-sm-6 mx-auto">
+
+
+            <div class="col-sm-3 mx-auto">
                 <select name="player" class="form-control">
                 {% for name in Names %}
                     <option name="player" value={{ name.username }}>{{name.name}} ({{ name.org }})</option>
@@ -108,8 +161,8 @@
             <div class="col-sm-12 text-center">
                 <button name="send" class="btn btn-success" value="true">Check out with JustGiving</button>
             </div>
-            
-        </form></div>   
+
+        </form></div>
     </div>
 
     </body>

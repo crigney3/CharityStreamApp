@@ -1,2 +1,2 @@
-Golden Apple,0.60,22
-Golden God Apple,10.00,23
+Golden Apple,0.60,22,"Provides Absorption I for 2 minutes (providing 4 points of absorption health) and Regeneration II (1 half heart every 25 ticks, heart × 0.4 per second) for 5 seconds (long enough to heal 4 points of damage)."
+Golden God Apple,10.00,23,"Provides Absorption IV for 2 minutes (providing 16 points of absorption health), Regeneration II (1 half heart every 25 ticks, heart × 0.4 per second) for 20 seconds (long enough to heal 16 points of damage), Fire Resistance I for 5 minutes and Resistance I (20% reduced damage from all sources except the void) for 5 minutes."
