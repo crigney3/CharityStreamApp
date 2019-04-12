@@ -1,9 +1,9 @@
-Iron Ingot,0.20,1
-Iron Pickaxe,0.50,3
-Gold Ingot,0.15,8
-Gold Pickaxe,0.40,10
-Diamond,1.00,15
-Diamond Pickaxe,2.90,17
-Steak,0.25,24
-Spectral Arrow,0.10,25
-Bow,1.00,26
+Gold Ingot,0.15,8,"Crafting material"
+Gold Pickaxe,0.40,10,"Used for mining. Durability 33"
+Iron Ingot,0.20,1,"Crafting material"
+Iron Pickaxe,0.50,3,"Used for mining. Durability 251"
+Diamond,1.00,15,"Crafting material"
+Diamond Pickaxe,2.90,17,"Used for mining. Durability 1562"
+Steak,0.25,24,"Restores 8 hunger"
+Spectral Arrow,0.10,25,"Causes the target to glow for 10 seconds"
+Bow,1.00,26,"Ranged weapon"

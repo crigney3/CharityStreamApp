@@ -1,15 +1,15 @@
-Iron Sword,0.35,2
-Iron Helmet,0.85,4
-Iron Chestplate,1.40,5
-Iron Leggings,1.25,6
-Iron Boots,0.70,7
-Gold Sword,0.25,9
-Gold Helmet,0.60,11
-Gold Chestplate,1.00,12
-Gold Leggings,0.90,13
-Gold Boots,0.50,14
-Diamond Sword,1.95,16
-Diamond Helmet,4.80,18
-Diamond Chestplate,7.50,19
-Diamond Leggings,6.70,20
-Diamond Boots,3.85,21
+Gold Sword,0.25,9,"Durability 32"
+Gold Helmet,0.60,11,"Defense 2, Durability 78"
+Gold Chestplate,1.00,12,"Defense 5, Durability 113"
+Gold Leggings,0.90,13,"Defense 3, Durability 106"
+Gold Boots,0.50,14,"Defense 1, Durability 92"
+Iron Sword,0.35,2,"Durability 250"
+Iron Helmet,0.85,4,"Defense 2, Durability 166"
+Iron Chestplate,1.40,5,"Defense 6, Durability 241"
+Iron Leggings,1.25,6,"Defense 6, Durability 226"
+Iron Boots,0.70,7,"Defense 2, Durability 196"
+Diamond Sword,1.95,16,"Durability 1561"
+Diamond Helmet,4.80,18,"Defense 3, Durability 364"
+Diamond Chestplate,7.50,19,"Defense 8, Durability 529"
+Diamond Leggings,6.70,20,"Defense 6, Durability 496"
+Diamond Boots,3.85,21,"Defense 3, Durability 430"

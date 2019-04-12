@@ -11,10 +11,11 @@ misc = []
 players = []
 
 class item:
-    def __init__(self, name, cost, code):
+    def __init__(self, name, cost, code, description):
         self.name = name
         self.cost = cost
         self.code = code
+        self.description = description
 
 class player:
     def __init__(self, name, username, org):
@@ -25,25 +26,25 @@ class player:
 with open('./items/items.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
-        newItem = item(row[0], row[1], row[2])
+        newItem = item(row[0], row[1], row[2], row[3])
         items.append(newItem)
 
 with open('./items/buffs.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
-        newItem = item(row[0], row[1], row[2])
+        newItem = item(row[0], row[1], row[2], row[3])
         buffs.append(newItem)
 
 with open('./items/misc.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
-        newItem = item(row[0], row[1], row[2])
+        newItem = item(row[0], row[1], row[2], row[3])
         misc.append(newItem)
 
 with open('./items/players.csv') as csvfile:
     reader = csv.reader(csvfile, delimiter=',')
     for row in reader:
-        newPlayer = player(row[0], row[1], row[2])
+        newPlayer = player(row[0], row[1], row[2],)
         players.append(newPlayer)
 
 @application.route("/", methods=['GET', 'POST'])
