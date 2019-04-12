@@ -62,10 +62,11 @@ def index():
         if request.args.get('message') != None:
             message = request.args.get('message')
             if(len(message) < 190):
+                #if(code != None):
                 message = message + '{' + code + '}'
         else:
-            if(code != None):
-                message = '{' + code + '}'
+            #if(code != None):
+            message = '{' + code + '}'
         print(message)
         if send == 'true':
             #Send the url to JustGiving for Checkout
