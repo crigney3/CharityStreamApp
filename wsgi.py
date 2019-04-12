@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for
+from decimal import *
 import csv
 application = Flask(__name__)
 
@@ -50,9 +51,9 @@ def index():
 
     if request.method == 'POST':
         if request.args.get('cost') != None:
-            cost = float(request.form.get('cost').replace("/", "")) + float(request.args.get('cost'))
+            cost = Decimal(request.form.get('cost').replace("/", "")) + Decimal(request.args.get('cost'))
         else:
-            cost = float(request.form.get('cost').replace("/", ""))
+            cost = Decimal(request.form.get('cost').replace("/", ""))
         print(cost)
         code = str(request.form.get('code')).replace("/", "")
 
@@ -63,7 +64,8 @@ def index():
             if(len(message) < 190):
                 message = message + '{' + code + '}'
         else:
-            message = '{' + code + '}'
+            if(code != None):
+                message = '{' + code + '}'
         print(message)
         if send == 'true':
             #Send the url to JustGiving for Checkout

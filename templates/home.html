@@ -22,7 +22,7 @@
         
     <div class="row">
         <div class="col-sm-4 text-center">
-        <div class="lead">Miscellanious</div>
+        <div class="lead">Miscellaneous</div>
             {% for misc in Misc %}
             <div class="row text-center">
                 <div class="storeItem col-sm-4">{{  misc.name  }}</div>
@@ -83,17 +83,18 @@
     </div>
     
     <div class="row">
-        <div class="col-sm-12 text-center">Do not edit the cost or message! The donation will go through without any items being sent.</div>   
+        <div class="col-sm-8 text-center lead mx-auto">Do not reduce the cost or remove the message that has been added! The donation may go through without any items being sent. You can add a message before or after the {bracketed} characters as long as the total length does not exceed 200 characters.</div>   
     </div>
     
-        <br>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            Choose a player to give your items to!   
+        </div>         
+    </div>
         
     <div class="row">
         <div class="col-sm-12 text-center"><form action="" method="POST">
             
-            <div class="col-sm-3">
-                <input type="hidden" name="code" value=""/>
-            </div>
             
             <div class="col-sm-6 mx-auto">
                 <select name="player" class="form-control">
@@ -103,10 +104,6 @@
             </select>
             </div>
             
-            <div class="col-sm-3">
-                <input type="hidden" name="cost" value=0/>
-            </div>
-            <br>
             <div class="col-sm-12 text-center">
                 <button name="send" class="btn btn-success" value="true">Check out with JustGiving</button>
             </div>
