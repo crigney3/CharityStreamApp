@@ -3,7 +3,7 @@ from decimal import *
 import csv
 application = Flask(__name__)
 
-JG_FUNDRAISING_PAGE_ID = '11779935';
+JG_FUNDRAISING_PAGE_ID = '11777099';
 
 items = []
 buffs = []
