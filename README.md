@@ -1,6 +1,6 @@
 # CSH Minecraft Charity Stream Store
 
-[https://minecraftstream.csh.rit.edu](minecraftstream.csh.rit.edu) is the official website for the annual Computer Science House Minecraft Charity Tournament. 
+[minecraftstream.csh.rit.edu](https://minecraftstream.csh.rit.edu) is the official website for the annual Computer Science House Minecraft Charity Tournament. 
 
 ## The Event
 
@@ -24,7 +24,7 @@ Our second tournament is being planned, and will have new and improved features 
 
 #### The Purpose
 
-[https://minecraftstream.csh.rit.edu](This website) was developed to add a unique twist to this tournament. I wanted to create something so that donations would automatically change the course of the game. I came up with the idea of having donations grant items to players in the tournament. I was able to create this through this site, and our first tournament resulted in some amazing swings caused by donations. 
+[This website](https://minecraftstream.csh.rit.edu) was developed to add a unique twist to this tournament. I wanted to create something so that donations would automatically change the course of the game. I came up with the idea of having donations grant items to players in the tournament. I was able to create this through this site, and our first tournament resulted in some amazing swings caused by donations. 
 
 #### How it works
 
