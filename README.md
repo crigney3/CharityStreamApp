@@ -1,6 +1,6 @@
 # CSH Minecraft Charity Stream Store
 
-[minecraftstream.csh.rit.edu](https://minecraftstream.csh.rit.edu) is the official website for the annual Computer Science House Minecraft Charity Tournament. 
+[minecraftstream.csh.rit.edu](https://minecraftstream.csh.rit.edu) is the official website for my annual Computer Science House Minecraft Charity Tournament. 
 
 ## The Event
 
@@ -8,7 +8,7 @@ CSH's Annual Charity Minecraft Tournament is a competition between any number of
 ***
 #### First Annual Tournament (April 12th, 2019)
 
-Our first tournament was hosted on April 12th of 2019, and was broadcast on the [official JustGiving Twitch channel](https://www.twitch.tv/justgiving). With 18 players entering the initial round, our competitors fought through:
+I designed and created our first tournament, which we hosted on April 12th of 2019, and was broadcast on the [official JustGiving Twitch channel](https://www.twitch.tv/justgiving). With 18 players entering the initial round, our competitors fought through:
 * Hunger Games
 * The Walls
 * Bed Wars
@@ -18,13 +18,13 @@ In the end, we had a triumphant winner and had raised $300 for the Mental Health
 ---
 #### Second Annual Tournament (TBD, 2020)
 
-Our second tournament is being planned, and will have new and improved features to update the flow of gameplay and make the best viewing/playing experience.
+The second tournament is being planned, and will have new and improved features to update the flow of gameplay and make the best viewing/playing experience.
 
 ## The Website
 
 #### The Purpose
 
-[This website](https://minecraftstream.csh.rit.edu) was developed to add a unique twist to this tournament. I wanted to create something so that donations would automatically change the course of the game. I came up with the idea of having donations grant items to players in the tournament. I was able to create this through this site, and our first tournament resulted in some amazing swings caused by donations. 
+I developed [This website](https://minecraftstream.csh.rit.edu) to add a unique twist to this tournament. I wanted to create something so that donations would automatically change the course of the game. I came up with the idea of having donations grant items to players in the tournament. I was able to create this through this site, and our first tournament resulted in some amazing swings caused by donations. 
 
 #### How it works
 
