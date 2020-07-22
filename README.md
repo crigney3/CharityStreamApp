@@ -1,5 +1,7 @@
 # CSH Minecraft Charity Stream Store
 
+#### Check out the [new and improved website!](https://github.com/aidan-brown/Charity-Stream-Web-App)
+
 [minecraftstream.csh.rit.edu](https://minecraftstream.csh.rit.edu) is the official website for my annual Computer Science House Minecraft Charity Tournament. 
 
 ## The Event
